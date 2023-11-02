@@ -44,3 +44,5 @@ Input was Arabic.
 XV
 ```
 
+## Testing
+Run `pytest src/roman_converter/tests/pytest.py` to execute some tests for the package. 

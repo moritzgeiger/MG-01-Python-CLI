@@ -43,7 +43,7 @@ def roman_to_arabic(roman: str):
         for r in roman[::-1]: 
             current_result = ROMAN_MAPPING.get(r)
             reps = reps + 1 if current_result == prev_result else 0
-            if reps > 3:
+            if reps > 2: 
                 print(f"Invalid Roman number. Your input: {roman}")
                 sys.exit()
 

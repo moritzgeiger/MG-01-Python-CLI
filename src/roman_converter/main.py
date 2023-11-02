@@ -1,17 +1,20 @@
+"""Module handling the entry converter function."""
+
 import sys
 import typer
 
 from roman_converter import utils
 
 def main():
-    """Identifies if input is Roman or Arabic and executes conversion functions for either of them.
+    """
+    Identifies if input is Roman or Arabic and executes conversion functions for either of them.
     """
 
     # instanciating user input
     args = sys.argv
 
     if len(args) < 2:
-        print(f"Please provide valid integer or string.")
+        print("Please provide valid integer or string.")
         sys.exit()
 
     m = args[1]

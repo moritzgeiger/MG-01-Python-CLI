@@ -1,6 +1,5 @@
+"""Utils file for the converter app."""
 import sys
-
-# pytest, hypothesis
 
 ROMAN_MAPPING = {
     'I': 1,
@@ -39,29 +38,28 @@ def roman_to_arabic(roman: str):
     reps = 0
 
     # evaluating Roman number
-    if all([i in ROMAN_MAPPING for i in roman]):
-        for r in roman[::-1]: 
+    if all((i in ROMAN_MAPPING for i in roman)):
+        for r in roman[::-1]:
             current_result = ROMAN_MAPPING.get(r)
             reps = reps + 1 if current_result == prev_result else 0
-            if reps > 2: 
+            if reps > 2:
                 print(f"Invalid Roman number. Your input: {roman}")
                 sys.exit()
 
             if current_result >= prev_result:
                 result += current_result
-            
+
             else:
                 result -= current_result
 
             prev_result = current_result
-        
+
         print(result)
-    
+
     else:
         print(f"Invalid Roman number: {roman}")
         sys.exit()
     return result
-    
 
 
 def arabic_to_roman(arabic: int):
@@ -83,4 +81,3 @@ def arabic_to_roman(arabic: int):
 
     print(result)
     return result
-

@@ -1,0 +1,10 @@
+[project]
+name = "hello_world_cli"
+version = "0.0.1"
+dependencies = [
+    "typer[all]"
+]
+
+[project.scripts]
+converter = "roman_converter.main:main"
+

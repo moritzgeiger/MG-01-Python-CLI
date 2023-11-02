@@ -60,6 +60,8 @@ def roman_to_arabic(roman: str):
     else:
         print(f"Invalid Roman number: {roman}")
         sys.exit()
+    return result
+    
 
 
 def arabic_to_roman(arabic: int):
@@ -80,4 +82,5 @@ def arabic_to_roman(arabic: int):
 
 
     print(result)
+    return result
 

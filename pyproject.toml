@@ -2,7 +2,8 @@
 name = "roman_converter"
 version = "0.0.1"
 dependencies = [
-    "typer[all]"
+    "typer[all]",
+    "pytest"
 ]
 
 [project.scripts]

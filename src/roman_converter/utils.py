@@ -1,5 +1,7 @@
 import sys
 
+# pytest, hypothesis
+
 ROMAN_MAPPING = {
     'I': 1,
     'V': 5,
@@ -40,8 +42,8 @@ def roman_to_arabic(roman: str):
     if all([i in ROMAN_MAPPING for i in roman]):
         for r in roman[::-1]: 
             current_result = ROMAN_MAPPING.get(r)
-            reps += 1 if current_result == prev_result else reps
-            if reps >= 3:
+            reps = reps + 1 if current_result == prev_result else 0
+            if reps > 3:
                 print(f"Invalid Roman number. Your input: {roman}")
                 sys.exit()
 

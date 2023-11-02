@@ -1,5 +1,5 @@
 [project]
-name = "hello_world_cli"
+name = "roman_converter"
 version = "0.0.1"
 dependencies = [
     "typer[all]"
